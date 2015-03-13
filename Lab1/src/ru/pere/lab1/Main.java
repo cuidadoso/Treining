@@ -16,7 +16,7 @@ public class Main {
 		// String s2 = reader.readLine();
 		x2 = Integer.parseInt(reader.readLine());
 		
-		System.out.println("Среднее арифметическое: "+(x1+x2)/2);
+		System.out.println("Среднее арифметическое: "+(x1+(double)x2)/2);
 
 	}
 
