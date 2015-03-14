@@ -19,10 +19,10 @@ public class Main {
 		
 		double d = Math.pow(b, 2) - 4*a*c;
 		
-		if (d<0) out.println("РљРѕСЂРЅРµР№ РЅРµС‚");
+		if (d<0) out.println("Корней нет.");
 		else if (d==0){
 			double x = -b/(2*a);
-			out.printf("Р•РґРёРЅСЃС‚РІРµРЅРЅС‹Р№ РєРѕСЂРµРЅСЊ x= %d", x);
+			out.printf("Единственный корень x= %d", x);
 		} else {
 			double ds = Math.sqrt(d);
 			double x1 = (-b+ds)/(2*a);
