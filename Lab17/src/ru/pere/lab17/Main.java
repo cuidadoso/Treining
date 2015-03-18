@@ -12,7 +12,7 @@ public class Main {
 		//p1.name="Alejandro";
 		//p1.Age=39;
 		//p2.Age = 4;
-		out.printf("%s - %d\n", p1.Name, p1.Age);
+		out.printf("%s - %d\n", p1.getName(), p1.Age);
 		Person.showTotal();
 		
 		int a = 5;
@@ -23,6 +23,8 @@ public class Main {
 
 		out.println("-=*************=-");
 		Staff s1 = new Staff("Andry", 30, 45, 3000D);
+		
+		s1.setName("alexander");
 		//s1.show();
 		//Person p = new Person("Andry", 30);
 		Object p = s1;
@@ -31,6 +33,14 @@ public class Main {
 		out.println(p.toString());
 		p = new Object();
 		out.println(p.toString());
+		//Person.Totals=100;
+		out.println(Person.getTotals());
+		
+		SingleTone st1 = SingleTone.getInstance();
+		SingleTone st2 = SingleTone.getInstance();
+		st1.data="Hello";
+		out.println(st2.data);
+		
 	}
 
 }

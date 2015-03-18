@@ -6,9 +6,9 @@ import java.io.PrintStream;
 
 public class Person {
 	
-	public static long Totals = 0;
+	private static long Totals = 0;
 	
-	public String Name;
+	private String Name;
 	public int Age;
 	
 	public Person(){
@@ -39,5 +39,17 @@ public class Person {
 	@Override
 	public String toString() {
 		return String.format ("%s - %d\n", Name, Age);
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name.toUpperCase();
+	}
+
+	public static long getTotals() {
+		return Totals;
 	}
 }
