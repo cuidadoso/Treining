@@ -71,7 +71,7 @@ public class Dot extends Figure implements  Moveable{
 				
 			}
 			
-		}
+		};
 		
 	}
 
