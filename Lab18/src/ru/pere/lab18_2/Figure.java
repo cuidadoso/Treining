@@ -4,7 +4,7 @@ import static java.lang.System.out;
 
 import java.util.ArrayList;
 
-public class Figure {
+public abstract class Figure {
 	
 	private static ArrayList<Figure> figures = new   ArrayList<Figure>();
 	
@@ -13,9 +13,9 @@ public class Figure {
 		//out.println("Figure constructor without params");
 	}
 	
-	public void drow(){
-		out.println("Figure show (Method Figure.drow)");
-	}
+	public abstract void drow();//{
+	//	out.println("Figure show (Method Figure.drow)");
+	//}
 	
 	public static void drowScene() {
 		for (Figure f : figures) {
@@ -23,5 +23,17 @@ public class Figure {
 			//out.println("Figure show list (Method drowScene)"+f.figures.indexOf(f));
 		}
 	}
+
+	public static void scaleScene(double n) {
+		for (Figure f : figures) {
+			if (f instanceof Scalable){
+				((Scalable) f).scale(n);
+			}
+			f.drow();
+			//out.println("Figure show list (Method drowScene)"+f.figures.indexOf(f));
+		}
+	}
+	
+	
 
 }

@@ -2,7 +2,7 @@ package ru.pere.lab18_2;
 
 import static java.lang.System.out;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements Scalable, Moveable {
 	
 	private Dot center;
 	private int radius;
@@ -84,6 +84,20 @@ public class Circle extends Figure {
 	public String toString() {
 		return String.format("Circle ("+getX()+","+getY()+")"+" radius: "+getRadius());
 		//return super.toString();
+	}
+
+	@Override
+	public void scale(double s) {
+		
+		radius *= s;
+		
+	}
+
+	@Override
+	public void Move(int x, int y) {
+		
+		center.Move(x, y);
+			
 	}
 
 	
