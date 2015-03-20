@@ -15,7 +15,11 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		double r = Integral(0, Math.PI/2);
+		double r = Integral(0, Math.PI/2, new MathFunction(){
+			public double F(double x){
+				return Math.pow(Math.sin(x), 2.0);
+			}
+		});
 		System.out.printf("Integral: %g", r);
 	}
 
