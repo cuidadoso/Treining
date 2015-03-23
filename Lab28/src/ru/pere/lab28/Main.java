@@ -33,6 +33,18 @@ public class Main {
 			reader.close();
 			writer.close();
 			out.printf("Chars: %d\nWords: %d\nLines: %d\n", chars, words, lines);
+			out.println("*************************************************");
+			
+			RandomAccessFile raf = new RandomAccessFile(sourceFile, "rw");
+			
+			//out.println(raf.length());
+			raf.seek(raf.length());
+			String s = "\nLa Fine";
+			raf.write(s.getBytes("UTF-8"));
+			//raf.seek(2L);
+			//out.println(raf.readUTF());
+			
+			raf.close();
 		}
 		
 		
